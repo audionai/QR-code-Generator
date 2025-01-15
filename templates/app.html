@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    form input {
+        background-color: aliceblue;
+        border: none;
+        padding: 15px;
+        border-radius: 15px;
+        margin: auto;
+    }
+    form button {
+        padding: 15px;
+        border-radius: 15px;
+        background-color: black;
+        color: green;
+    }
+    img {
+        width: 90px;
+        height: 90px;
+        padding: 15px;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;width: 200px;margin: 15px;
+        flex-direction: column;background-color: antiquewhite;
+    }
+    div button {
+        background: none;border-radius: 15px;border: none;
+    }
+    code {
+        display: inline;
+    }
+    .ll button {
+        background: none;
+        border: none;color: white;
+        border: 2px solid #F4F6F9;
+        left: 50%;
+        top: 50%;
+        color: #878C90;
+    }
+    .ll input {
+        background: none;
+        border: 2px solid #F4F6F9;
+        left: 50%;
+        top: 50%;
+        color: #878C90;
+        margin: 15px;
+        outline: none;
+    }
+    .ll {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    code {
+        display: ruby;
+    }
+    .vie {
+        position: fixed;
+        width: 350px;
+        height: 100px;
+        background: white;
+        color: black;
+        border-radius: 15px;
+        tp: 0;bottom: 0;right: 0;        border: 2px solid #F4F6F9;
+    }
+</style>
+<body>
+    <form action="" method="post" class="ll">
+        
+        <input type="text" name="name" placeholder="Enter Description">
+        <input type="text" name="siz" id="" placeholder="Main Color">
+        <input type="text" name="bb" id="" placeholder="Background Color">
+        <button type="submit">Create</button>
+
+    </form>
+    {% if mes == True %}
+    <div class="vie">
+        <p>Pleaes The main colr and Back color not be the same</p>
+    </div>
+    {% else %}
+    <!-- <div class="vie"></div> -->
+    {% endif %}
+    <code class="pp">
+        {% for x in li %}
+        <div>
+        <img src="{{ x }}" alt="" srcset="" downloadable>
+        <button id="down" onclick="download()">download</button>
+        <a href="">open</a>
+    </div>
+    <script>
+        <!-- do -->
+        function download() {
+            var link = document.createElement("a")
+            link.href = "{{x}}"
+            link.download = "{{ x}}"
+            link.click()
+
+        }
+    </script>
+    {% endfor %}
+    </code>
+</body>
+</html>
