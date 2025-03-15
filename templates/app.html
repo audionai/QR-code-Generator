@@ -1,42 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<head></head>
 <link rel="stylesheet" href="/static/style.css"/>
 <body>
     <form action="" method="post" class="ll">
-        
         <input type="text" name="name" placeholder="Enter Description">
-        <input type="text" name="siz" id="" placeholder="Main Color">
-        <input type="text" name="bb" id="" placeholder="Background Color">
-        <button type="submit">Create</button>
-
-    </form>
+        <input type="text" name="siz" id="" placeholder="Main Color"><input type="text" name="bb" id="" placeholder="Background Color">
+        <button type="submit">Create</button></form>
     {% if mes == True %}
-    <div class="vie">
-        <p>Pleaes The main colr and Back color not be the same</p>
-    </div>
+    <div class="vie"><p>Pleaes The main colr and Back color not be the same</p></div>
     {% else %}
-    <!-- <div class="vie"></div> -->
     {% endif %}
     <code class="pp">
-        {% for x in li %}
-        <div>
-        <img src="{{ x }}" alt="" srcset="" downloadable>
-        <button id="down" onclick="download()">download</button>
-        <a href="">open</a>
+        {% for x in li %}<div><img src="{{ x }}" alt="" srcset="" downloadable><button id="down" onclick="download()">download</button><a href="">open</a>
     </div>
     <script>
-        <!-- do -->
         function download() {
             var link = document.createElement("a")
             link.href = "{{x}}"
             link.download = "{{ x}}"
             link.click()
-
         }
     </script>
     {% endfor %}
